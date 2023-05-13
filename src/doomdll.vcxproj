@@ -462,7 +462,7 @@
     </ClCompile>
     <ClCompile>
       <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\Ad4m\Downloads\Quake4Doom-Alpha2\Quake4Doom-Alpha2\src\idlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/idlib</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;STEAM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -478,7 +478,7 @@
     </ClCompile>
     <ClCompile>
       <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>C:\Users\Ad4m\Downloads\Quake4Doom-Alpha2\Quake4Doom-Alpha2\src\idlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)/idlib</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;STEAM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
