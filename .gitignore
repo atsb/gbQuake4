@@ -24,7 +24,7 @@
 *.lai
 *.la
 *.a
-*.lib
+/Win32/Release/idlib.lib
 
 # Executables
 *.exe
