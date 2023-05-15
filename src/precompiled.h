@@ -31,23 +31,17 @@ If you have questions concerning this license or the applicable additional terms
 
 #include <afx.h>
 #include <afxwin.h>         // MFC core and standard components
-
+#ifdef _WIN32
+#include <rpc.h>
+#endif
 #ifdef __cplusplus
-
+#ifndef _WIN32
 typedef unsigned char		byte;		// 8 bits
+#endif
 typedef unsigned short		word;		// 16 bits
 typedef unsigned int		dword;		// 32 bits
 typedef unsigned int		uint;
 // typedef unsigned long		ulong; // DG: long should be avoided.
-
-typedef signed char			int8;
-typedef unsigned char		uint8;
-typedef short int			int16;
-typedef unsigned short int	uint16;
-typedef int					int32;
-typedef unsigned int		uint32;
-typedef long long			int64;
-typedef unsigned long long	uint64;
 
 class ThreadedAlloc;		// class that is only used to expand the AutoCrit template to tag allocs/frees called from inside the R_AddModelSurfaces call graph
 #define PC_CVAR_ARCHIVE CVAR_ARCHIVE
@@ -145,7 +139,7 @@ public:
 
 //-----------------------------------------------------
 
-#define ID_TIME_T time_t
+#define ID_TIME_T std::time_t
 
 #ifdef _WIN32
 
@@ -204,10 +198,10 @@ public:
 #define NDEBUG
 #endif
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 #include <stdarg.h>
-#include <string.h>
+#include <cstring>
 #include <assert.h>
 #include <ctime>
 #include <ctype.h>

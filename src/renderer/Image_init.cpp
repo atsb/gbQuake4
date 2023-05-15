@@ -97,31 +97,21 @@ struct imageClassificate_t {
 
 typedef idList< int > intList;
 
+const imageClassificate_t IC_Info[] = {
+	{ "models/characters", "Characters", IC_NPC, 512, 512 },
+	{ "models/weapons", "Weapons", IC_WEAPON, 512, 512 },
+	{ "models/monsters", "Monsters", IC_MONSTER, 512, 512 },
+	{ "models/mapobjects", "Model Geometry", IC_MODELGEOMETRY, 512, 512 },
+	{ "models/items", "Items", IC_ITEMS, 512, 512 },
+	{ "models", "Other model textures", IC_MODELSOTHER, 512, 512 },
 #ifdef STEAM
-const imageClassificate_t IC_Info[] = {
-	{ "models/characters", "Characters", IC_NPC, 512, 512 },
-	{ "models/weapons", "Weapons", IC_WEAPON, 512, 512 },
-	{ "models/monsters", "Monsters", IC_MONSTER, 512, 512 },
-	{ "models/mapobjects", "Model Geometry", IC_MODELGEOMETRY, 512, 512 },
-	{ "models/items", "Items", IC_ITEMS, 512, 512 },
-	{ "models", "Other model textures", IC_MODELSOTHER, 512, 512 },
 	{ "guis/assets", "Guis", IC_GUIS, 256, 256 },
-	{ "textures", "World Geometry", IC_WORLDGEOMETRY, 256, 256 },
-	{ "", "Other", IC_OTHER, 256, 256 }
-};
 #else
-const imageClassificate_t IC_Info[] = {
-	{ "models/characters", "Characters", IC_NPC, 512, 512 },
-	{ "models/weapons", "Weapons", IC_WEAPON, 512, 512 },
-	{ "models/monsters", "Monsters", IC_MONSTER, 512, 512 },
-	{ "models/mapobjects", "Model Geometry", IC_MODELGEOMETRY, 512, 512 },
-	{ "models/items", "Items", IC_ITEMS, 512, 512 },
-	{ "models", "Other model textures", IC_MODELSOTHER, 512, 512 },
 	{ "guis", "Guis", IC_GUIS, 256, 256 },
+#endif
 	{ "textures", "World Geometry", IC_WORLDGEOMETRY, 256, 256 },
 	{ "", "Other", IC_OTHER, 256, 256 }
 };
-#endif
 
 static int ClassifyImage( const char *name ) {
 	idStr str;

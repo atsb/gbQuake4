@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameCode", "GameCode", "{3D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{F464E540-A37A-4D17-8545-D63D0486E06B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Quake4", "doomdll.vcxproj", "{49BEC5C6-B964-417A-851E-808886B57420}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gbQuake4", "doomdll.vcxproj", "{49BEC5C6-B964-417A-851E-808886B57420}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,6 +28,8 @@ Global
 		Dedicated Debug|x64 = Dedicated Debug|x64
 		Dedicated Release|Win32 = Dedicated Release|Win32
 		Dedicated Release|x64 = Dedicated Release|x64
+		Release_GOG|Win32 = Release_GOG|Win32
+		Release_GOG|x64 = Release_GOG|x64
 		Release|Win32 = Release|Win32
 		Release|x64 = Release|x64
 	EndGlobalSection
@@ -60,6 +62,10 @@ Global
 		{49BEC5C6-B964-417A-851E-808886B57430}.Dedicated Release|Win32.Build.0 = Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57430}.Dedicated Release|x64.ActiveCfg = DebugInline|x64
 		{49BEC5C6-B964-417A-851E-808886B57430}.Dedicated Release|x64.Build.0 = DebugInline|x64
+		{49BEC5C6-B964-417A-851E-808886B57430}.Release_GOG|Win32.ActiveCfg = Release_GOG|Win32
+		{49BEC5C6-B964-417A-851E-808886B57430}.Release_GOG|Win32.Build.0 = Release_GOG|Win32
+		{49BEC5C6-B964-417A-851E-808886B57430}.Release_GOG|x64.ActiveCfg = Release_GOG|x64
+		{49BEC5C6-B964-417A-851E-808886B57430}.Release_GOG|x64.Build.0 = Release_GOG|x64
 		{49BEC5C6-B964-417A-851E-808886B57430}.Release|Win32.ActiveCfg = Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57430}.Release|Win32.Build.0 = Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57430}.Release|x64.ActiveCfg = Release|x64
@@ -92,6 +98,10 @@ Global
 		{49BEC5C6-B964-417A-851E-808886B57400}.Dedicated Release|Win32.Build.0 = Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57400}.Dedicated Release|x64.ActiveCfg = DebugInline|x64
 		{49BEC5C6-B964-417A-851E-808886B57400}.Dedicated Release|x64.Build.0 = DebugInline|x64
+		{49BEC5C6-B964-417A-851E-808886B57400}.Release_GOG|Win32.ActiveCfg = Release_GOG|Win32
+		{49BEC5C6-B964-417A-851E-808886B57400}.Release_GOG|Win32.Build.0 = Release_GOG|Win32
+		{49BEC5C6-B964-417A-851E-808886B57400}.Release_GOG|x64.ActiveCfg = Release_GOG|x64
+		{49BEC5C6-B964-417A-851E-808886B57400}.Release_GOG|x64.Build.0 = Release_GOG|x64
 		{49BEC5C6-B964-417A-851E-808886B57400}.Release|Win32.ActiveCfg = Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57400}.Release|Win32.Build.0 = Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57400}.Release|x64.ActiveCfg = Release|x64
@@ -124,6 +134,10 @@ Global
 		{49BEC5C6-B964-417A-851E-808886B57420}.Dedicated Release|Win32.Build.0 = Dedicated Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57420}.Dedicated Release|x64.ActiveCfg = Dedicated Release|x64
 		{49BEC5C6-B964-417A-851E-808886B57420}.Dedicated Release|x64.Build.0 = Dedicated Release|x64
+		{49BEC5C6-B964-417A-851E-808886B57420}.Release_GOG|Win32.ActiveCfg = Release_GOG|Win32
+		{49BEC5C6-B964-417A-851E-808886B57420}.Release_GOG|Win32.Build.0 = Release_GOG|Win32
+		{49BEC5C6-B964-417A-851E-808886B57420}.Release_GOG|x64.ActiveCfg = Release_GOG|x64
+		{49BEC5C6-B964-417A-851E-808886B57420}.Release_GOG|x64.Build.0 = Release_GOG|x64
 		{49BEC5C6-B964-417A-851E-808886B57420}.Release|Win32.ActiveCfg = Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57420}.Release|Win32.Build.0 = Release|Win32
 		{49BEC5C6-B964-417A-851E-808886B57420}.Release|x64.ActiveCfg = Release|x64
