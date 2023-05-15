@@ -1143,26 +1143,27 @@ static void RB_T_Shadow( const drawSurf_t *surf ) {
 		return;
 	}
 
-	// patent-free work around
-	if ( !external ) {
-		// "preload" the stencil buffer with the number of volumes
-		// that get clipped by the near or far clip plane
-		qglStencilOp( GL_KEEP, tr.stencilDecr, tr.stencilDecr );
-		GL_Cull( CT_FRONT_SIDED );
-		RB_DrawShadowElementsWithCounters( tri, numIndexes );
-		qglStencilOp( GL_KEEP, tr.stencilIncr, tr.stencilIncr );
-		GL_Cull( CT_BACK_SIDED );
-		RB_DrawShadowElementsWithCounters( tri, numIndexes );
+	// atsb - Carmack's Reverse
+	
+	// depth-fail/Z-Fail stencil shadows
+	if (!external) {
+		qglStencilOp(GL_KEEP, tr.stencilDecr, GL_KEEP);
+		GL_Cull(CT_FRONT_SIDED);
+		RB_DrawShadowElementsWithCounters(tri, numIndexes);
+		qglStencilOp(GL_KEEP, tr.stencilIncr, GL_KEEP);
+		GL_Cull(CT_BACK_SIDED);
+		RB_DrawShadowElementsWithCounters(tri, numIndexes);
 	}
-
 	// traditional depth-pass stencil shadows
-	qglStencilOp( GL_KEEP, GL_KEEP, tr.stencilIncr );
-	GL_Cull( CT_FRONT_SIDED );
-	RB_DrawShadowElementsWithCounters( tri, numIndexes );
+	else {
+		qglStencilOp(GL_KEEP, GL_KEEP, tr.stencilIncr);
+		GL_Cull(CT_FRONT_SIDED);
+		RB_DrawShadowElementsWithCounters(tri, numIndexes);
 
-	qglStencilOp( GL_KEEP, GL_KEEP, tr.stencilDecr );
-	GL_Cull( CT_BACK_SIDED );
-	RB_DrawShadowElementsWithCounters( tri, numIndexes );
+		qglStencilOp(GL_KEEP, GL_KEEP, tr.stencilDecr);
+		GL_Cull(CT_BACK_SIDED);
+		RB_DrawShadowElementsWithCounters(tri, numIndexes);
+	}
 }
 
 /*
