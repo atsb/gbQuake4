@@ -304,7 +304,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
       <OmitFramePointers>false</OmitFramePointers>
-      <AdditionalIncludeDirectories>$(SolutionDir)/idlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)/idlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;_WINDOWS;_FINAL;GAME_DLL;Q4SDK;STEAM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -562,8 +562,7 @@
     <ClCompile Include="game\mp\VoiceComms.cpp" />
     <ClCompile Include="game\mp\stats\StatEvent.cpp" />
     <ClCompile Include="game\mp\stats\StatManager.cpp" />
-    <ClCompile Include="game\mp\stats\StatWindow.cpp" />
-    <ClCompile Include="idlib\precompiled.cpp">
+    <ClCompile Include="game\mp\stats\StatWindow.cpp" >
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugInline|Win32'">Create</PrecompiledHeader>

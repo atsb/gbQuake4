@@ -45,3 +45,9 @@
 *.lock
 *.vsidx
 src/.vs/q4sdk/v17/.suo
+*.lib
+*.exp
+*.res
+*.filters
+*.filters
+src/doomdll.vcxproj.filters

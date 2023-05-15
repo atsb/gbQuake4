@@ -462,7 +462,7 @@
     </ClCompile>
     <ClCompile>
       <PrecompiledHeaderFile>precompiled.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)/idlib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)/idlib</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;STEAM;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -696,8 +696,7 @@
     <ClCompile Include="framework\async\AsyncServer.cpp" />
     <ClCompile Include="framework\async\MsgChannel.cpp" />
     <ClCompile Include="framework\async\NetworkSystem.cpp" />
-    <ClCompile Include="framework\async\ServerScan.cpp" />
-    <ClCompile Include="idlib\precompiled.cpp">
+    <ClCompile Include="framework\async\ServerScan.cpp" >
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug with inlines|Win32'">Create</PrecompiledHeader>
