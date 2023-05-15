@@ -3969,10 +3969,11 @@ idFileSystemLocal::HasD3XP
 ===============
 */
 bool idFileSystemLocal::HasD3XP( void ) {
+#ifdef ID_ALLOW_D3XP
 	int			i;
 	idStrList	dirs, pk4s;
 	idStr		gamepath;
-
+#endif
 	if ( d3xp == -1 ) {
 		return false;
 	} else if ( d3xp == 1 ) {
