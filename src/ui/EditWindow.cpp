@@ -462,21 +462,20 @@ void idEditWindow::InitScroller( bool horizontal )
 	const char *thumbImage = "guis/assets/scrollbar_thumb.tga";
 	const char *barImage = "guis/assets/scrollbarv.tga";
 	const char *scrollerName = "_scrollerWinV";
-
-	if (horizontal) {
-		barImage = "guis/assets/scrollbarh.tga";
-		scrollerName = "_scrollerWinH";
-	}
 #else
 	const char* thumbImage = "gfx/guis/scrollbar_thumb.tga";
 	const char* barImage = "gfx/guis/scrollbarv.tga";
 	const char* scrollerName = "_scrollerWinV";
-
-	if (horizontal) {
+#endif
+	if (horizontal) 
+#ifdef STEAM
+		barImage = "guis/assets/scrollbarh.tga";
+		scrollerName = "_scrollerWinH";
+#else
 		barImage = "gfx/guis/scrollbarh.tga";
 		scrollerName = "_scrollerWinH";
-	}
 #endif
+
 	const idMaterial *mat = declManager->FindMaterial( barImage );
 	mat->SetSort( SS_GUI );
 	sizeBias = mat->GetImageWidth();

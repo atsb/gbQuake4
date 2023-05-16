@@ -4198,11 +4198,19 @@ void idFileSystemLocal::FindMapScreenshot( const char *path, char *buf, int len 
 			char *data = new char[ dlen ];
 			file->Read( data, dlen );
 			CloseFile( file );
-			idStr::snPrintf( buf, len, "guis/assets/splash/addon/%s.tga", mapname.c_str() );
+#ifdef STEAM
+			idStr::snPrintf(buf, len, "guis/assets/splash/addon/%s.tga", mapname.c_str());
+#else
+			idStr::snPrintf( buf, len, "gfx/guis/test/%s.tga", mapname.c_str() );
+#endif
 			WriteFile( buf, data, dlen );
 			delete[] data;
 		} else {
+#ifdef STEAM
 			idStr::Copynz( buf, "guis/assets/splash/pdtempa", len );
+#else
+			idStr::Copynz(buf, "gfx/guis/mainmenu/pdtempa", len);
+#endif
 		}
 	}
 }
