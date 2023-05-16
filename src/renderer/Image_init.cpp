@@ -107,7 +107,7 @@ const imageClassificate_t IC_Info[] = {
 #ifdef STEAM
 	{ "guis/assets", "Guis", IC_GUIS, 256, 256 },
 #else
-	{ "guis", "Guis", IC_GUIS, 256, 256 },
+	{ "gfx/guis", "Guis", IC_GUIS, 256, 256 },
 #endif
 	{ "textures", "World Geometry", IC_WORLDGEOMETRY, 256, 256 },
 	{ "", "Other", IC_OTHER, 256, 256 }

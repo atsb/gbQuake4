@@ -4209,9 +4209,8 @@ void idFileSystemLocal::FindMapScreenshot( const char *path, char *buf, int len 
 #ifdef STEAM
 			idStr::Copynz( buf, "guis/assets/splash/pdtempa", len );
 #else
-			idStr::Copynz(buf, "gfx/guis/mainmenu/pdtempa", len)
+			idStr::Copynz(buf, "gfx/guis/mainmenu/pdtempa", len);
 #endif
-
 		}
 	}
 }
